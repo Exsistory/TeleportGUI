@@ -1,0 +1,99 @@
+main-settings:
+  # THERE ARE TWO MODES: GEYSER (use for a single server) OR FLOODGATE (use for bungee network OR if floodgate is installed)
+  mode: FLOODGATE
+
+teleport-gui:
+  settings:
+    tp-title: "&8Tp request from %player%"
+    tphere-title: "&8TpHere request from %player%"
+    slots: 27
+  items:
+    filler:
+      enable: true
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      # OPTIONS: FILL or BORDER
+      mode: FILL
+    allow-tp:
+      name: "&a&lALLOW TP"
+      material: LIME_WOOL
+      lore:
+        - "&7Click to accept!"
+      slot: 12
+    deny-tp:
+      name: "&c&lDENY TP"
+      material: RED_WOOL
+      lore:
+        - "&7Click to deny!"
+      slot: 14
+
+# MUST HAVE GEYSER INSTALLED!
+teleport-gui-bedrock:
+  settings:
+    tp-title: "Tp request"
+    tphere-title: "TpHere request"
+    description: "You have received a teleportation request from %player%"
+  buttons:
+    accept:
+      name: "Accept"
+      image:
+        enable: true
+        # Choose between URL AND PATH
+        mode: URL
+        url: "https://i.ibb.co/ydVRZCc/accept.png"
+        path: ""
+    deny:
+      name: "Deny"
+      image:
+        enable: true
+        mode: URL
+        url: "https://i.ibb.co/1Lsfp6C/deny.png"
+        path: ""
+
+teleport-delay:
+  cancel-on-move: true
+  # In seconds
+  default: 5
+  # OPTIONS: ACTION, CHAT, OR TITLE
+  mode: ACTION
+  # Set custom delays for players, use permission teleportgui.delay.<name> so teleportgui.delay.vip
+  custom-times:
+    vip: 3
+    mvp: 4
+    # Add yours!
+
+expire-time:
+  enable: true
+  # Time formats: d Days, h Hours, m Minutes, s Seconds
+  time: 1m
+
+# Add aliases commands to the main ones
+commands:
+  tpa:
+    - tp
+    - teleport
+  tpahere:
+    - tphere
+    - teleporthere
+  tpatoggle:
+    - tptoggle
+    - tpt
+
+messages:
+  accepted-request: "&aYou accepted the teleport request!"
+  player-accepted-request: "&a%player% accepted the teleport request!"
+  no-longer-online: "&c%player% is no longer online!"
+  tp-request-sent: "&aTeleport request sent to %player%"
+  tphere-request-sent: "&aTeleport here request sent to %player%"
+  tp-cancelled-sender: "&cThe tp request was denied"
+  tp-cancelled-receiver: "&cYou denied the tp request"
+  player-not-found: "&cPlayer not found!"
+  tp-move-cancelled: "&cOops! You moved, teleportation has been cancelled!"
+  tp-successful: "&aTeleported Successfully!"
+  teleporting-in: "&aTeleporting in %time% seconds!"
+  reload-plugin: "&aPlugin has been reloaded!"
+  tp-toggle-allow: "&aYou will now receive tp requests!"
+  tp-toggle-deny: "&cYou will no longer receive tp requests!"
+  not-accepting-requests: "&c%player% isn't accepting tp requests!"
+  tp-self: "&cYou can't tp yourself!"
+  tp-request-expired: "&cTP request has expired!"

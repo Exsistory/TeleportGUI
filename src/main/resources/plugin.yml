@@ -1,0 +1,14 @@
+name: TeleportGUI
+version: '${version}'
+main: exsistory.project.teleportgui.Main
+api-version: '1.13'
+softdepend: [floodgate, Geyser-Spigot, PlaceholderAPI]
+commands:
+  tpa:
+    description: Sends a teleport request to another player.
+  tpahere:
+    description: Sends a teleport here request to another player
+  tg:
+  teleportgui:
+  tpatoggle:
+    description: Allow or Deny teleportation requests.
